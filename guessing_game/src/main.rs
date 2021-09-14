@@ -15,9 +15,14 @@ fn read_int() -> u8 {
 
 fn main() {
     println!("Hi! You can start guessing now");
-    let number: u8 = (random_int() % 100) as u8;
-    while read_int() != number {
-        println!("Nope, try again");
+    let number: u8 = (random_int() % 100 + 1) as u8;
+    loop {
+        let guess = read_int();
+        if guess != number {
+            println!("Nope, guessed number is {} than this", if guess > number { "lesser" } else { "greater" });
+        } else {
+            break;
+        }
     }
     println!("Right, it's {}!", number);
 }

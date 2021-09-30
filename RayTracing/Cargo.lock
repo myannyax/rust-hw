@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "basic_algs"
+name = "ray_tracing"
 version = "0.1.0"
